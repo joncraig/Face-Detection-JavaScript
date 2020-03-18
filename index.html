@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,31 @@
   <title>Document</title>
   <script defer src="face-api.min.js"></script>
   <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
   <style>
-    body {
+  body {
       margin: 0;
       padding: 0;
       width: 100vw;
       height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
+      flex-direction: column;
+      font-family: 'Roboto', sans-serif;
+  }
+
+    #video {
+      position: absolute;
+      box-shadow: 2px 2px 2px 1px black;
+    }
+
+    #videoFrame {
+      flex: 1;
+      width: 720px;
+      height: 540px;
+    }
+    #data {
+      padding:15%;
     }
 
     canvas {
@@ -23,7 +40,12 @@
     }
   </style>
 </head>
+
 <body>
-  <video id="video" width="720" height="560" autoplay muted></video>
+  <div id="videoFrame">
+    <video id="video" width="720" height="540" autoplay muted></video>
+  </div>
+  <div id="data">...</div>
 </body>
+
 </html>
